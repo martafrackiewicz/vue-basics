@@ -16,14 +16,18 @@
   </div>
   <Customer name="Jan" age="29" designation="Software Engineer" />
   <Employee />
+  <Counter />
+  <Greeting />
 </template>
 
 <script>
 import Customer from './components/Customer.vue';
 import Employee from './components/Employee.vue';
+import Counter from './components/Counter.vue';
+import Greeting from './components/Greeting.vue';
 
 export default {
-  components: { Customer, Employee },
+  components: { Customer, Employee, Counter, Greeting },
 };
 </script>
 
