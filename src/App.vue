@@ -14,12 +14,25 @@
       </div>
     </div>
   </div>
+
   <!-- <Register />
   <Customer name="Jan" age="29" designation="Software Engineer" />
   <Employee />
   <Counter />
   <Greeting /> -->
-  <AuthUser />
+  <AuthUser @isLoggedIn="handleLogin" />
+  <div v-if="isLoggedIn">
+    <p class="h3 fw-bold text-success">Welcome user from App.vue</p>
+    <p class="fst-italic">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
+      corrupti natus labore dolor, perferendis aspernatur totam sunt ipsum magni
+      aperiam nemo officiis, doloremque quas obcaecati laudantium! Sequi rem
+      rerum soluta!
+    </p>
+  </div>
+  <div v-else>
+    <p class="h3 fw-bold text-dark">Thank you! from App.vue</p>
+  </div>
 </template>
 
 <script>
@@ -33,6 +46,16 @@ import AuthUser from './components/AuthUser.vue';
 export default {
   // components: { Customer, Employee, Counter, Greeting, Register },
   components: { AuthUser },
+  data() {
+    return {
+      isLoggedIn: false,
+    };
+  },
+  methods: {
+    handleLogin(isLoggedIn) {
+      this.isLoggedIn = isLoggedIn;
+    },
+  },
 };
 </script>
 

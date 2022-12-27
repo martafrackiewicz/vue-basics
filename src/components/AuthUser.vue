@@ -6,7 +6,7 @@
         <div class="card">
           <div class="card-body">
             <div v-if="isLoggedIn">
-              <p class="h3 fw-bold text-success">Welcome user</p>
+              <p class="h3 fw-bold text-success">Welcome user from component</p>
               <p class="fst-italic">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Repellendus corrupti natus labore dolor, perferendis aspernatur
@@ -15,7 +15,7 @@
               </p>
             </div>
             <div v-else>
-              <p class="h3 fw-bold text-dark">Thank you!</p>
+              <p class="h3 fw-bold text-dark">Thank you! from component</p>
             </div>
             <div>
               <button
@@ -48,9 +48,11 @@ export default {
   methods: {
     login() {
       this.isLoggedIn = true;
+      this.$emit('isLoggedIn', this.isLoggedIn);
     },
     logout() {
       this.isLoggedIn = false;
+      this.$emit('isLoggedIn', this.isLoggedIn);
     },
   },
 };
