@@ -14,6 +14,7 @@
       </div>
     </div>
   </div>
+  <Register />
   <Customer name="Jan" age="29" designation="Software Engineer" />
   <Employee />
   <Counter />
@@ -25,10 +26,12 @@ import Customer from './components/Customer.vue';
 import Employee from './components/Employee.vue';
 import Counter from './components/Counter.vue';
 import Greeting from './components/Greeting.vue';
+import Register from './components/Register.vue';
 
 export default {
-  components: { Customer, Employee, Counter, Greeting },
+  components: { Customer, Employee, Counter, Greeting, Register },
 };
+Register;
 </script>
 
 <style lang="scss">
