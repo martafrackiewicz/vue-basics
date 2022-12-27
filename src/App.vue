@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container mt-3">
+    <div class="grid">
+      <div class="row">
+        <div class="col">
+          <p class="h3 text-success fw-bold">App Component</p>
+          <p class="fst-italic">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            asperiores architecto, culpa dolore dolorem explicabo ab quas
+            laudantium consequatur debitis, alias qui quo tenetur eveniet, hic
+            deleniti. Sint, laudantium debitis?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Customer name="Jan" age="29" designation="Software Engineer" />
+  <Employee />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Customer from './components/Customer.vue';
+import Employee from './components/Employee.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { Customer, Employee },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import './style.scss';
 </style>
