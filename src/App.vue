@@ -14,24 +14,26 @@
       </div>
     </div>
   </div>
-  <Register />
+  <!-- <Register />
   <Customer name="Jan" age="29" designation="Software Engineer" />
   <Employee />
   <Counter />
-  <Greeting />
+  <Greeting /> -->
+  <AuthUser />
 </template>
 
 <script>
-import Customer from './components/Customer.vue';
-import Employee from './components/Employee.vue';
-import Counter from './components/Counter.vue';
-import Greeting from './components/Greeting.vue';
-import Register from './components/Register.vue';
+// import Customer from './components/Customer.vue';
+// import Employee from './components/Employee.vue';
+// import Counter from './components/Counter.vue';
+// import Greeting from './components/Greeting.vue';
+// import Register from './components/Register.vue';
+import AuthUser from './components/AuthUser.vue';
 
 export default {
-  components: { Customer, Employee, Counter, Greeting, Register },
+  // components: { Customer, Employee, Counter, Greeting, Register },
+  components: { AuthUser },
 };
-Register;
 </script>
 
 <style lang="scss">
