@@ -1,27 +1,12 @@
 <template>
-  <div class="container mt-3">
-    <div class="grid">
-      <div class="row">
-        <div class="col">
-          <p class="h3 text-success fw-bold">App Component</p>
-          <p class="fst-italic">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            asperiores architecto, culpa dolore dolorem explicabo ab quas
-            laudantium consequatur debitis, alias qui quo tenetur eveniet, hic
-            deleniti. Sint, laudantium debitis?
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <Navbar />
   <!-- <Register />
   <Customer name="Jan" age="29" designation="Software Engineer" />
   <Employee />
   <Counter />
   <Greeting /> -->
-  <AuthUser @isLoggedIn="handleLogin" />
-  <UserList />
+  <!-- <AuthUser @isLoggedIn="handleLogin" />
+  <UserList /> -->
   <!-- <div v-if="isLoggedIn">
     <p class="h3 fw-bold text-success">Welcome user from App.vue</p>
     <p class="fst-italic">
@@ -42,12 +27,14 @@
 // import Counter from './components/Counter.vue';
 // import Greeting from './components/Greeting.vue';
 // import Register from './components/Register.vue';
-import AuthUser from './components/AuthUser.vue';
-import UserList from './components/UserList.vue';
+// import AuthUser from './components/AuthUser.vue';
+// import UserList from './components/UserList.vue';
+import Navbar from './components/Navbar.vue';
 
 export default {
   // components: { Customer, Employee, Counter, Greeting, Register },
-  components: { AuthUser, UserList },
+  // components: { AuthUser, UserList },
+  components: { Navbar },
   data() {
     return {
       isLoggedIn: false,
