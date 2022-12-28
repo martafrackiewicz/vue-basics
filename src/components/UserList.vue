@@ -6,7 +6,7 @@
         <p class="h3">Users List</p>
       </div>
     </div>
-    <div class="row">
+    <div v-if="!loading && users.length > 0" class="row">
       <div class="col">
         <table class="table table-hover text-center table-striped">
           <thead class="bg-light">
@@ -32,6 +32,12 @@
         </table>
       </div>
     </div>
+    <div v-if="loading">
+      <img alt="" class="d-block m-auto" src="../assets/loading.gif" />
+    </div>
+    <div v-if="errorMsg">
+      <p class="text-danger">{{ errorMsg }}</p>
+    </div>
   </div>
 </template>
 
@@ -50,14 +56,19 @@ export default {
   data() {
     return {
       users: [],
+      loading: false,
+      errorMsg: null,
     };
   },
   async created() {
     try {
+      this.loading = true;
       let res = await getUsers();
       this.users = res.data;
+      this.loading = false;
     } catch (err) {
-      console.log(err);
+      this.loading = false;
+      this.errorMsg = err;
     }
   },
 };
