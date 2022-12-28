@@ -21,7 +21,8 @@
   <Counter />
   <Greeting /> -->
   <AuthUser @isLoggedIn="handleLogin" />
-  <div v-if="isLoggedIn">
+  <UserList />
+  <!-- <div v-if="isLoggedIn">
     <p class="h3 fw-bold text-success">Welcome user from App.vue</p>
     <p class="fst-italic">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
@@ -29,10 +30,10 @@
       aperiam nemo officiis, doloremque quas obcaecati laudantium! Sequi rem
       rerum soluta!
     </p>
-  </div>
-  <div v-else>
+  </div> -->
+  <!-- <div v-else>
     <p class="h3 fw-bold text-dark">Thank you! from App.vue</p>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -42,10 +43,11 @@
 // import Greeting from './components/Greeting.vue';
 // import Register from './components/Register.vue';
 import AuthUser from './components/AuthUser.vue';
+import UserList from './components/UserList.vue';
 
 export default {
   // components: { Customer, Employee, Counter, Greeting, Register },
-  components: { AuthUser },
+  components: { AuthUser, UserList },
   data() {
     return {
       isLoggedIn: false,
