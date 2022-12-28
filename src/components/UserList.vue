@@ -22,7 +22,13 @@
           <tbody>
             <tr v-for="user in users" :key="user.id">
               <td>{{ user.id }}</td>
-              <td>{{ user.name }}</td>
+              <td>
+                <router-link
+                  class="text-decoration-none fw-bold text-success"
+                  :to="'/users/' + user.id"
+                  >{{ user.name }}</router-link
+                >
+              </td>
               <td>{{ user.email }}</td>
               <td>{{ user.company.name }}</td>
               <td>{{ user.website }}</td>
